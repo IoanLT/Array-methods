@@ -29,25 +29,27 @@
 
 // console.log(salePrices);
 
-const products = [
-    {name: 'star', price: 20},
-    {name: 'mushroom', price: 40},
-    {name: 'shells', price: 30},
-    {name: 'banana', price: 10},
-    {name: 'something', price: 50},
-];
+// const products = [
+//     {name: 'star', price: 20},
+//     {name: 'mushroom', price: 40},
+//     {name: 'shells', price: 30},
+//     {name: 'banana', price: 10},
+//     {name: 'something', price: 50},
+// ];
 
-const saleProducts = products.map(product => {
-    if(product.price > 30){
-        return {name: product.name, price: product.price / 2};
-    } else {
-        return product;
-    }
-});
+// const saleProducts = products.map(product => {
+//     if(product.price > 30){
+//         return {name: product.name, price: product.price / 2};
+//     } else {
+//         return product;
+//     }
+// });
 
-console.log(products);
-console.log(saleProducts);
+// console.log(products);
+// console.log(saleProducts);
 
+
+// Reduce method
 
 
 
