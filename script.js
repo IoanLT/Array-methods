@@ -50,84 +50,79 @@
 
 
 // Reduce method
+// const scores = [10, 20, 60, 40, 70, 90, 30];
+
+// const result = scores.reduce((acc, curr) => {
+//   if (curr > 50) {
+//     acc++;
+//   }
+//   return acc;
+// }, 0);
+// console.log(result);
+
+// const scores = [
+//   {player: 'nelu', score: 50},
+//   {player: 'yoshi', score: 30},
+//   {player: 'nelu', score: 70},
+//   {player: 'mario', score: 60}
+// ];
+
+// const neluTotal = scores.reduce((acc, curr) => {
+//   if (curr.player === 'nelu'){
+//     acc += curr.score;
+//   }
+//   return acc;
+// }, 0);
+// console.log(marioTotal);
 
 
+// Find method
+
+// const scores = [10, 5, 0, 40, 60, 10, 20, 70];
+
+// const highScore = scores.find(score => score > 50); 
+// console.log(highScore);
 
 
+// Sort method
+// Example 1
+// const names = ['mario', 'luigi', 'nelu', 'yoshi', 'chun-li'];
 
+// names.sort();
+// console.log(names);
+// names.reverse();
+// console.log(names);
 
-// Exercise 1 - Wild Code School
-const instructors = [
-    {
-      name: 'John',
-      availabilty: 'all',
-      specialities: ['Javascript', 'Python', 'C++']
-    },
-    {
-      name: 'Mary',
-      availabilty: 'weekend',
-      specialities: ['Javascript', 'Ruby', 'C++']
-    },
-    {
-      name: 'Chris',
-      availabilty: 'evenings',
-      specialities: ['Javascript']
-    },
-    {
-      name: 'Anthony',
-      availabilty: 'all',
-      specialities: ['Python', 'Ruby']
-    },
-    {
-      name: 'Pauline',
-      availabilty: 'only Mondays',
-      specialities: ['Javascript', 'Html', 'CSS']
-    },
-    {
-      name: 'Mark',
-      availabilty: 'all',
-      specialities: ['C#', 'C++', 'Javascript']
-    },
-    {
-      name: 'Helen',
-      availabilty: 'evenings',
-      specialities: ['Python', 'C++']
-    },
-    {
-      name: 'Charles',
-      availabilty: 'none',
-      specialities: ['Python']
-    }
-  ];
-  
-  let codeInstructors = instructors.filter((instructor) => {  
-    if(instructor.specialities.includes('Javascript') && (instructor.availabilty === 'all' || instructor.availabilty === 'weekend')) {
-      return instructor.name;
-    } 
-  });
-  console.log(codeInstructors);
-  
-  // PART 2
-  // Iterate over that new array of instructors available and show a message per instructor saying:
-  // Hi nameOfInstructor, we inform you that this weekend you will be doing the support class
-  
-  codeInstructors.forEach(instructor => {
-    console.log(`Hi ${instructor.name}, we inform you that this weekend you will be doing the support class`);
-  });
-  
-  // PART 3
-  // Modify the previous message checking that if an instructor also knows about Python, the message needs to be:
-  // Hi nameOfInstructor, we inform you that this weekend you will be doing the support class and you need to prepare a Python workshop
-  
-instructors.forEach(instructor => {
-    if((instructor.specialities.includes('Python') && instructor.specialities.includes('Javascript')) 
-    && (instructor.availabilty === 'all' || instructor.availabilty === 'weekend')) {
-        console.log(`Hi ${instructor.name}, we inform you that this weekend you will be doing the support class and you need to prepare a Python workshop`);
-    }
-});
+// Example 2
+const scores = [10, 50, 20, 5, 35, 70, 45];
 
+scores.sort((a, b) => a - b);
+console.log(scores);
+// scores.reverse();
+// console.log(scores);
 
+// Example 3
+const players = [
+  {player: 'nelu', score: 50},
+  {player: 'yoshi', score: 30},
+  {player: 'luigi', score: 70},
+  {player: 'mario', score: 60},
+  {player: 'chun-li', score: 20},
+];
 
+// players.sort((a, b) => {
+//   if(a.score > b.score){
+//     return -1;
+//   } else if(b.score > a.score){
+//     return 1;
+//   } else {
+//     return 0;
+//   }
+// });
+// console.log(players);
+
+players.sort((a, b) => b.score - a.score);
+console.log(players);
 
 
 
